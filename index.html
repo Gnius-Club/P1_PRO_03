@@ -32,7 +32,7 @@
             font-weight: bold;
         }
          ul, ol {
-            margin-top: 0;
+            margin-top: 5px; /* Added some margin */
             margin-bottom: 10px;
             padding-left: 20px;
         }
@@ -43,6 +43,14 @@
         em { /* Style for facilitator's notes */
             font-style: italic;
             color: #555;
+        }
+         /* Ensure list styling within Action column is consistent */
+         .content td ul, .content td ol {
+            padding-left: 20px;
+            margin-top: 5px;
+        }
+         .content td li {
+            margin-bottom: 3px; /* Slightly tighter list spacing */
         }
     </style>
     <script>
@@ -76,14 +84,14 @@
              <div class="banner" onclick="toggleContent('activity_0_content')">
                 📝 Resumen de Sesión
             </div>
-            <div id="activity_0_content" class="content"> <!-- Start hidden -->
+            <div id="activity_0_content" class="content">
                 <table>
                     <tr>
                         <td style="width: 50%; padding: 10px; border-right: 1px solid #ddd;">
                             <strong>🎯 Objetivo de la Sesión:</strong>
                             <ul>
                                 <li>Realizar pruebas exhaustivas del prototipo básico.</li>
-                                <li>Identificar errores (bugs) simples (ej. clic no funciona, personaje mal colocado).</li>
+                                <li>Identificar errores (bugs) simples.</li>
                                 <li>Corregir los errores identificados.</li>
                                 <li>Reforzar el ciclo de prueba y corrección en equipo.</li>
                             </ul>
@@ -100,7 +108,7 @@
                             <br>
                             <strong>🛠️ Materiales Específicos:</strong>
                             <ul>
-                                <li>Dispositivos con Scratch Jr. y los proyectos funcionales (con clics) de la Sesión 2.</li>
+                                <li>Dispositivos con Scratch Jr. y los proyectos funcionales de la Sesión 2.</li>
                                 <li>Tablero Kanban con tarjetas de S2 en "¡Listo!" y nuevas tarjetas como "Probar Interacción Principal", "Corregir Errores Visuales", "Corregir Errores de Clics" en "Por Hacer".</li>
                             </ul>
                             <br>
@@ -131,13 +139,13 @@
                     </tr>
                     <tr>
                         <td>
-                            <strong>Paso 1: (2 min) Revisar Funcionalidad y Plan</strong>
+                            <strong>Paso 1: Revisar Funcionalidad y Plan</strong>
                             <ul>
-                                <li>Proyectar <strong>Diapositiva 1</strong> (Título: Sesión 3: ¡Cazadores de Errores! Contenido: Imagen divertida de lupa sobre un código o personaje de Scratch Jr, icono de "bug" amigable 🐞).</li>
-                                <li>Dar la bienvenida y establecer el tema de "caza de errores".</li>
-                                <li>Proyectar <strong>Diapositiva 2</strong> (Título: ¿Qué Funciona? ¡Los Clics! Contenido: Recordatorio visual de S2: Clic Héroe -> Escena Mejor, Clic Villano -> Escena Peor funcionando).</li>
-                                <li>Preguntar qué funciona en sus aventuras (¡los clics!).</li>
-                                <li>Explicar el plan de hoy: probar MUCHO y arreglar fallos.</li>
+                                <li>Proyectar <strong>Diapositiva 1</strong>. <em>Título:</em> Sesión 3: ¡Cazadores de Errores!</li>
+                                <li>Dar la bienvenida y establecer el tema.</li>
+                                <li>Proyectar <strong>Diapositiva 2</strong>. <em>Título:</em> ¿Qué Funciona? ¡Los Clics!</li>
+                                <li>Preguntar qué funciona en sus aventuras.</li>
+                                <li>Explicar el plan de hoy: probar y arreglar fallos.</li>
                             </ul>
                         </td>
                         <td>
@@ -150,11 +158,11 @@
                     </tr>
                     <tr>
                         <td>
-                            <strong>Paso 2: (3 min) Roles y Liderazgo de Prueba</strong>
+                            <strong>Paso 2: Roles y Liderazgo de Prueba</strong>
                             <ul>
-                               <li>Recordar los roles (Diseñador/a, Constructor/a, Probador/a).</li>
-                               <li>Enfatizar que hoy, el/la Probador/a de Aventura ¡es el líder de la misión de caza de errores!</li>
-                               <li>Ofrecer de nuevo la rotación de roles si algún equipo quiere cambiar.</li>
+                               <li>Recordar los roles.</li>
+                               <li>Enfatizar que el/la Probador/a lidera la caza de errores.</li>
+                               <li>Ofrecer la rotación de roles.</li>
                                <li>Confirmar roles.</li>
                             </ul>
                         </td>
@@ -185,18 +193,18 @@
                     </tr>
                     <tr>
                         <td>
-                            <strong>Paso 1: (10 min) Probador/a Lidera la Prueba</strong>
+                            <strong>Paso 1: Probador/a Lidera la Prueba</strong>
                             <ul>
-                                <li>Proyectar <strong>Diapositiva 3</strong> (Título: ¡A Probar TODO! - Misión del Probador/a. Contenido: Lista de pruebas: Clic Héroe -> ¿Mejor?, Clic Villano -> ¿Peor?, ¿Personajes bien colocados?, ¿Algo raro? (ej. icono de error)).</li>
+                                <li>Proyectar <strong>Diapositiva 3</strong>. <em>Título:</em> ¡A Probar TODO! - Misión del Probador/a.</li>
                                 <li>Instruir al Probador/a para que pruebe exhaustivamente:
                                     <ul>
-                                        <li>Clic en Héroe varias veces. ¿Siempre va a Escena Mejor?</li>
-                                        <li>Clic en Villano varias veces. ¿Siempre va a Escena Peor?</li>
-                                        <li>¿Los personajes están bien colocados al inicio y en las otras escenas?</li>
-                                        <li>¿Ven algo más que parezca extraño o que no funcione como esperaban?</li>
+                                        <li>Clic en Héroe (varias veces) -> ¿Siempre Escena Mejor?</li>
+                                        <li>Clic en Villano (varias veces) -> ¿Siempre Escena Peor?</li>
+                                        <li>¿Posición inicial y en escenas correcta?</li>
+                                        <li>¿Algo más raro?</li>
                                     </ul>
                                 </li>
-                                <li>El Probador/a debe anotar (mentalmente o en papel simple si es necesario) o comunicar verbalmente los errores encontrados al equipo. (Ej: "¡Oye, el Villano me lleva a la escena feliz!").</li>
+                                <li>Probador/a comunica errores al equipo.</li>
                                 <li>Mover la tarjeta "Probar Interacción Principal" a "Haciendo".</li>
                             </ul>
                         </td>
@@ -217,14 +225,14 @@
                     </tr>
                     <tr>
                         <td>
-                            <strong>Paso 2: (15 min) Constructor/a y Diseñador/a Arreglan Errores</strong>
+                            <strong>Paso 2: Constructor/a y Diseñador/a Arreglan Errores</strong>
                             <ul>
-                               <li>Constructor/a: Escucha atentamente al Probador/a. Busca el error en los bloques (¿número de escena incorrecto? ¿bloque faltante?) o en la posición de los personajes y lo corrige.</li>
-                               <li>Diseñador/a: Ayuda a identificar si el error es de lógica (bloques) o visual (posición, apariencia). Compara con los dibujos originales si es necesario.</li>
-                               <li>Fomentar la colaboración: el Probador/a puede mostrar el error al Constructor/a.</li>
-                               <li>Mover tarjetas como "Corregir Errores Visuales" o "Corregir Errores de Clics" a "Haciendo" cuando se esté trabajando en un error específico.</li>
-                               <li>Después de una corrección, el Probador/a vuelve a probar ESE error específico.</li>
-                               <li>Circular activamente, ayudando a diagnosticar y solucionar los errores más comunes (números de escena, bloques desconectados).</li>
+                               <li>Constructor/a: Escucha, busca el error y lo corrige.</li>
+                               <li>Diseñador/a: Ayuda a identificar si el error es lógico o visual.</li>
+                               <li>Fomentar colaboración.</li>
+                               <li>Mover tarjetas de corrección a "Haciendo".</li>
+                               <li>Después de corrección, Probador/a vuelve a probar ESE error.</li>
+                               <li>Circular y ayudar a diagnosticar y solucionar.</li>
                             </ul>
                         </td>
                         <td>
@@ -241,12 +249,12 @@
                     </tr>
                     <tr>
                         <td>
-                            <strong>Paso 3: (5 min) Verificación Final y Kanban</strong>
+                            <strong>Paso 3: Verificación Final y Kanban</strong>
                             <ul>
-                                <li>Una vez que los errores reportados estén corregidos y verificados por el Probador/a, mover las tarjetas de corrección correspondientes a "¡Listo!".</li>
-                                <li>Asegurarse de que la tarjeta "Probar Interacción Principal" también llegue a "¡Listo!".</li>
-                                <li>Proyectar <strong>Diapositiva 4</strong> (Título: ¡Kanban Actualizado! Contenido: Tablero Kanban visualmente limpio, con las tareas de prueba/corrección en "¡Listo!").</li>
-                                <li>Confirmar con los equipos que las pruebas básicas funcionan correctamente.</li>
+                                <li>Mover tarjetas de corrección a "¡Listo!" tras verificación.</li>
+                                <li>Asegurarse que "Probar Interacción Principal" llegue a "¡Listo!".</li>
+                                <li>Proyectar <strong>Diapositiva 4</strong>. <em>Título:</em> ¡Kanban Actualizado!</li>
+                                <li>Confirmar con equipos que las pruebas básicas funcionan.</li>
                             </ul>
                         </td>
                         <td>
@@ -274,11 +282,11 @@
                     </tr>
                     <tr>
                         <td>
-                            <strong>Paso 1: (2 min) Revisión y Celebración</strong>
+                            <strong>Paso 1: Revisión y Celebración</strong>
                             <ul>
-                               <li>Proyectar <strong>Diapositiva 5</strong> (Título: ¡Errores Cazados! ¡Prototipo Listo! Contenido: Imagen celebratoria con personajes de Scratch Jr. y el icono de "bug" tachado 🐞🚫, confeti).</li>
-                               <li>Preguntar brevemente si encontraron errores y si lograron arreglarlos.</li>
-                               <li>Felicitar el trabajo de "caza de errores" y la colaboración.</li>
+                               <li>Proyectar <strong>Diapositiva 5</strong>. <em>Título:</em> ¡Errores Cazados! ¡Prototipo Listo!</li>
+                               <li>Preguntar brevemente si encontraron y arreglaron errores.</li>
+                               <li>Felicitar el trabajo de caza de errores y colaboración.</li>
                                <li>Declarar que el prototipo rápido está casi listo.</li>
                             </ul>
                         </td>
@@ -292,11 +300,11 @@
                     </tr>
                     <tr>
                         <td>
-                            <strong>Paso 2: (3 min) Guardar y Próximos Pasos</strong>
+                            <strong>Paso 2: Guardar y Próximos Pasos</strong>
                             <ul>
-                                <li>Proyectar <strong>Diapositiva 6</strong> (Título: ¡Guardado Final y Entrega! Contenido: Icono grande de Guardar + cohete despegando o paquete listo para entregar 🚀/🎁).</li>
-                                <li>¡¡¡INSISTIR en GUARDAR el proyecto con las correcciones!!!</li>
-                                <li>Explicar brevemente que la Sesión 4 será la última revisión y preparación para la "entrega" (mostrar al profesor).</li>
+                                <li>Proyectar <strong>Diapositiva 6</strong>. <em>Título:</em> ¡Guardado Final y Entrega!</li>
+                                <li>¡¡¡INSISTIR en GUARDAR el proyecto!!!</li>
+                                <li>Explicar brevemente la Sesión 4.</li>
                                 <li>Despedida.</li>
                             </ul>
                         </td>
